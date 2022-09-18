@@ -1,0 +1,73 @@
+<!--pages/list/list.wxml-->
+
+<!-- 基本元素view使用 -->
+<view class="tips">-- 基本元素view使用 --</view>
+<view class="container1">
+  <view>A</view>
+  <view>B</view>
+  <view>C</view>
+</view>
+
+<!-- 滚动显示scroll-view  配合scroll-y -->
+<view class="tips">-- 滚动显示scroll-view 配合scroll-y --</view>
+<scroll-view class="container2" scroll-y>
+  <view>A</view>
+  <view>B</view>
+  <view>C</view>
+</scroll-view>
+
+
+<!-- 轮播图 swiper -->
+<view class="tips">-- 轮播图 swiper --</view>
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" circular>
+  <!-- autoplay 自动播放  interval="3000" -->
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+
+</swiper>
+
+
+<!-- text 和 rich-text -->
+<view class="tips">-- text 和 rich-text --</view>
+<view>
+  手机号长按选中 使用text元素加上selectable
+  <text selectable>18111111111</text>
+</view>
+
+<rich-text nodes="<h1 style='color:red'> 标题1 </h1>"></rich-text>
+
+
+<!-- button -->
+<view class="tips">-- button --</view>
+<view class="tips">-- 通过type指定颜色属性 --</view>
+<!-- 通过type指定颜色属性 -->
+<button>普通按钮</button>
+<button type="primary">主色调</button>
+<button type="warn">警告</button>
+
+<view class="tips">-- size="mini" 小尺寸 --</view>
+<!-- size="mini" 小尺寸-->
+<button size="mini">小号按钮</button>
+
+<view class="tips">-- plain镂空按钮 --</view>
+<!-- plain镂空按钮 -->
+<button plain>镂空按钮</button>
+
+<view class="tips">-- image图片 --</view>
+<image src="/images/1.jpg" mode="aspectFit"></image>
+<!-- aspectFit 保存纵横比 -->
+<!-- aspectFill水平或垂直方向是完整的 -->
+<image src="/images/1.jpg" mode="aspectFill"></image>
+<!-- widthFix 宽度不变 -->
+<image src="/images/1.jpg" mode="widthFix"></image>
+<!-- heightFix 高度不变 -->
+<image src="/images/1.jpg" mode="heightFix"></image>

@@ -1,0 +1,46 @@
+<!--pages/list2/list2.wxml-->
+<!-- 数据绑定 -->
+
+<view>数据绑定 {{ info }}</view>
+<!-- <image src="{{imgSrc}}" mode="widthFix"></image> -->
+
+<!-- 三元运算 -->
+<view>{{randomNum>=5?"数字大于等于5":"数字小于等于5"}} ---
+  {{randomNum}}</view>
+
+<!-- 算数运算 -->
+<view>{{randomNum1 *100}}</view>
+
+<!-- 添加点击事件 bindtap-->
+<view>-----------------------bindtap</view>
+<button id="btn1" type="primary" bindtap="btnTap">点击按钮</button>
+
+<view style="text-align: center;">{{count}}</view>
+<button id="btn1" type="primary" bindtap="btnTapAdd">点击+1</button>
+
+<!-- 事件传参 data-*-->
+<button id="btn1" type="primary" bindtap="btnTapAdd2" data-info="{{2}}">点击+2</button>
+
+<!-- 输入框事件 bindinput -->
+<view>-----------------------bindinput</view>
+<input type="text" bindinput="inputHandler" value="{{msg}}" />
+<view>msg : {{msg}}</view>
+
+<!-- 条件渲染 -->
+<view>-----------------------条件渲染 wx:if</view>
+<view wx:if="{{type===1}}">男</view>
+<view wx:elif="{{type===2}}">女</view>
+<view wx:else>保密</view>
+
+<!-- 基于block条件渲染 -->
+<view>-----------------------基于block条件渲染</view>
+<!-- block不会渲染出任何组件 起包裹作用 它并不是一个组件 -->
+<block wx:if="{{true}}">
+  <view>view1</view>
+  <view>view2</view>
+</block>
+
+<!-- hidden 隐藏元素 -->
+<view>-----------------------hidden 隐藏元素</view>
+<view hidden="{{flag}}">flag：{{flag}}  flag条件为true时隐藏元素 否则显示</view>
+<button bindtap="changeFlag">toggle flag</button>
