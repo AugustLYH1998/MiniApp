@@ -26,14 +26,14 @@
 <input type="text" bindinput="inputHandler" value="{{msg}}" />
 <view>msg : {{msg}}</view>
 
-<!-- 条件渲染 -->
-<view>-----------------------条件渲染 wx:if</view>
+<!-- 条件渲染  wx:if wx:elif wx:else-->
+<view>-----------------------条件渲染 wx:if wx:elif wx:else</view>
 <view wx:if="{{type===1}}">男</view>
 <view wx:elif="{{type===2}}">女</view>
 <view wx:else>保密</view>
 
 <!-- 基于block条件渲染 -->
-<view>-----------------------基于block条件渲染</view>
+<view>-----------------------基于block条件渲染 block不会渲染出任何组件 起包裹作用 它并不是一个组件</view>
 <!-- block不会渲染出任何组件 起包裹作用 它并不是一个组件 -->
 <block wx:if="{{true}}">
   <view>view1</view>
@@ -42,5 +42,29 @@
 
 <!-- hidden 隐藏元素 -->
 <view>-----------------------hidden 隐藏元素</view>
-<view hidden="{{flag}}">flag：{{flag}}  flag条件为true时隐藏元素 否则显示</view>
+<view hidden="{{flag}}">flag：{{flag}} flag条件为true时隐藏元素 否则显示</view>
 <button bindtap="changeFlag">toggle flag</button>
+
+
+<!-- wx:for 循环渲染数组 -->
+<view>----------------------- wx:for 循环渲染数组 </view>
+<view wx:for="{{arr1}}">
+
+  索引为：{{index}}
+  item为：{{item}}
+</view>
+
+<!-- 手动自定义指定索引的名字 -->
+<view>----------------------- wx:for-index wx:for-item 手动自定义指定索引的名字 </view>
+<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="itm">
+
+  索引为：{{idx}}
+  item为：{{itm}}</view>
+
+<!-- 使用wx:for 添加key值 -->
+<view wx:for="{{userList}}" wx:key="id" class="username">
+  {{item.id}}
+  {{item.name}}
+</view>
+
+<!--  -->

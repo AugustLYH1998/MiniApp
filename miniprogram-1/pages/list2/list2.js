@@ -13,9 +13,13 @@ Page({
     count: 0,
     msg: "你好",
     type: 1,
-    flag: true
-
-
+    flag: true,
+    arr1: ['apple', 'huawei', 'xiaomi'],
+    userList:[
+      {id:1,name:'aa'},
+      {id:2,name:'bb'},
+      {id:3,name:'cc'}
+    ],
   },
   btnTap(e) {
     console.log(e);

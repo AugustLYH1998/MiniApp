@@ -1,7 +1,4 @@
 /**app.wxss**/
-/* 全局样式表 */
-/* 局部样式优先覆盖全局样式 权重相同 就近原则 */
-
 .container {
   height: 100%;
   display: flex;
@@ -10,11 +7,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-}
-
-
-view {
-  padding: 20rpx;
-  margin: 10rpx;
-  background-color: lightblue;
-}
+} 

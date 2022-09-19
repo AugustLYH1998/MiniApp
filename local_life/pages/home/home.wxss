@@ -1,0 +1,52 @@
+/* pages/home/home.wxss */
+
+swiper {
+  height: 350rpx;
+}
+
+swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1rpx solid gray;
+  border-top: 1rpx solid gray;
+
+}
+
+
+.grid-item {
+  width: 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1rpx solid gray;
+  border-bottom: 1rpx solid gray;
+  box-sizing: border-box;
+}
+
+.grid-item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.grid-item text {
+  font-size: 24rpx;
+  margin: 10rpx;
+}
+
+.buttomDis {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 10rpx;
+}
+
+.buttomDis image{
+  width: 45%;
+}
+

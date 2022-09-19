@@ -1,8 +1,14 @@
 /* pages/list2/list2.wxss */
 
-input{
+@import "/common/common.wxss";
+
+input {
   border: 1px solid grey;
   margin: 5px;
   padding: 5px;
   border-radius: 50px;
+}
+
+view{
+  color: purple;
 }

@@ -1,0 +1,4 @@
+<!--pages/list3/list3.wxml-->
+
+<button bindtap="getBtn"> 发起 get 请求</button>
+<button bindtap="postBtn"> 发起 post 请求</button>
