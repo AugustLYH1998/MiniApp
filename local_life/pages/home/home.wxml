@@ -20,7 +20,3 @@
   <image src="/images/link-02.png" mode="widthFix"></image>
 </view>
 
-<!-- 导航声明式跳转 -->
-<button>
-  <navigator url="/pages/message/message" open-type="switchTab">导航到消息页</navigator>
-</button>

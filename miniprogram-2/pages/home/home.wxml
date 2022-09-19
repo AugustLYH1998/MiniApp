@@ -1,0 +1,28 @@
+<view>----------------------------------------</view>
+<view>----------------------------------------</view>
+<view>----------------------------------------</view>
+<!-- 导航声明式跳转 -->
+<button>
+  <navigator url="/pages/message/message" open-type="switchTab">导航到消息页</navigator>
+</button>
+<!-- 非导航跳转 -->
+<button>
+  <navigator url="/pages/info/info" open-type="navigate">非导航跳转导航</navigator>
+</button>
+<!-- navigate 可省略 -->
+<button>
+  <navigator url="/pages/info/info">非导航跳转导航 省略属性</navigator>
+</button>
+
+<view>编程式导航</view>
+<button bindtap="gotoMessage" type="primary">通过编程式导航 切换到消息页面</button>
+
+<button bindtap="gotoInfo">跳转到非tabbar</button>
+
+<!-- 声明式导航传参 -->
+<navigator url="/pages/info/info?name=zs&age=20">navigator传参跳转</navigator>
+
+<!-- 编程式导航传参 -->
+<button bindtap="gotoInfo2">编程式导航传参</button>
+
+<view class="box"></view>
