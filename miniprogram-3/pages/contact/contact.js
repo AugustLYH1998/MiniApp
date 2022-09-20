@@ -1,4 +1,4 @@
-// pages/message/message.js
+// pages/contact/contact.js
 Page({
 
   /**
@@ -6,15 +6,6 @@ Page({
    */
   data: {
 
-    count: 0,
-    username: 'lishi',
-    country: 'CHINA'
-
-  },
-  add() {
-    this.setData({
-      count: this.data.count + 1
-    })
   },
 
   /**
@@ -56,16 +47,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
-    // console.log('触发了下拉刷新');
-    this.setData({
-      count: 0
-    })
-
-    // 关闭下拉刷新
-    wx.stopPullDownRefresh({
-      success: (res) => {},
-    })
 
   },
 

@@ -1,0 +1,25 @@
+<view style="background-color: rgb({{fullColor}});" class="box">
+
+  颜色:{{fullColor}}
+</view>
+
+<view class="btn">
+  <button bindtap="changR" type="primary">R+5 {{rgb.r}}</button>
+  <button bindtap="changG" type="primary">G+5 {{rgb.g}}</button>
+  <button bindtap="changB" type="primary">B+5 {{rgb.b}}</button>
+</view>
+
+<!-- 纯数据字段 -->
+<view>----------------</view>
+<view>-------纯数据字段---------</view>
+
+
+<view style="background-color: rgb({{fullColor2}});" class="box">
+颜色:{{fullColor2}}
+</view>
+
+<view class="btn">
+<button bindtap="changR2" type="primary">R+5 {{_rgb2.r}}</button>
+<button bindtap="changG2" type="primary">G+5 {{_rgb2.g}}</button>
+<button bindtap="changB2" type="primary">B+5 {{_rgb2.b}}</button>
+</view>

@@ -1,19 +1,32 @@
-// pages/message/message.js
+// pages/home/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-    count: 0,
-    username: 'lishi',
-    country: 'CHINA'
-
+    count: 0
   },
   add() {
     this.setData({
       count: this.data.count + 1
+    })
+  },
+
+  syncCount(e) {
+    // console.log('synCount');
+    // console.log(e);
+    this.setData({
+      count: e.detail.value
+    })
+  },
+
+  // 获取子组件实例
+  getChild() {
+    const child = this.selectComponent(".childA")
+    // console.log(child);
+    child.setData({
+      count: child.properties.count + 1
     })
   },
 
@@ -56,16 +69,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
-    // console.log('触发了下拉刷新');
-    this.setData({
-      count: 0
-    })
-
-    // 关闭下拉刷新
-    wx.stopPullDownRefresh({
-      success: (res) => {},
-    })
 
   },
 

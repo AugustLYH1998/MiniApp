@@ -1,0 +1,11 @@
+<view>
+
+  {{n1}} + {{n2}} = {{sum}}
+
+</view>
+
+<button bindtap="addCount">n1+1</button>
+<button bindtap="addCount2">n2+1</button>
+
+
+<view>------------------------------------</view>

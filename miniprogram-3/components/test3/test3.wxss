@@ -1,0 +1,18 @@
+/* components/test3/test3.wxss */
+
+.box {
+  height: 200rpx;
+  color: white;
+  line-height: 200rpx;
+  text-align: center;
+  text-shadow: 0, 0, 2rpx, white;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn button {
+  width: 25%
+}

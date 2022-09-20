@@ -1,0 +1,6 @@
+<view>子组件的count:{{count}}</view>
+
+<button bindtap="add">子组件 count+1</button>
+
+
+<view>在behaviors中定义的用户名 {{username}}</view>

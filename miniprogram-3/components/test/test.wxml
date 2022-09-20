@@ -1,0 +1,13 @@
+<!--components/test/test.wxml-->
+
+<!-- 全局样式表的设置对组件无效 -->
+<text class="g-red-text">components/test/test.wxml</text>
+
+<view>{{count}}</view>
+<button bindtap="addCount"> + 1</button>
+
+<view> max : {{max}}</view>
+
+<button bindtap="showInfo">showInfo</button>
+
+
