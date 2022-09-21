@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/contact/contact"
+  ],
+  "preloadRule": {
+    "pages/contact/contact": {
+      "packages": ["p1"],
+      "network": "wifi"
+    }
+  },
+  "subPackages": [{
+    "root": "pkgA",
+    "name": "p1",
+    "pages": [
+      "pages/cat/cat",
+      "pages/dog/dog"
+    ]
+  }, {
+    "root": "pkgB",
+    "name": "p2",
+    "pages": [
+      "pages/bird/bird"
+    ],
+    "independent": true
+  }],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/message.png",
+        "selectedIconPath": "/images/message-active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "我的",
+        "iconPath": "/images/contact.png",
+        "selectedIconPath": "/images/contact-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "my-number": "/components/number/number",
+    
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  }
+}
