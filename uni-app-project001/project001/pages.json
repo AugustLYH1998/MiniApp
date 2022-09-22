@@ -12,36 +12,30 @@
     "path": "pages/my/my",
     "style": {}
   }],
-  "subPackages": [
-    {
-      "root": "subpkg",
-      "pages": [
-        {
-          "path": "goods_detail/goods_detail",
-          "style": {
-          }
-        }
-          ,{
-                    "path" : "goods_list/goods_list",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "search/search",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
-    }
-  ],
+  "subPackages": [{
+    "root": "subpkg",
+    "pages": [{
+      "path": "goods_detail/goods_detail",
+      "style": {}
+    }, {
+      "path": "goods_list/goods_list",
+      "style": {
+        "navigationBarTitleText": "商品详情",
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 150,
+        "backgroundColor": "#f8f8f8"
+
+      }
+
+    }, {
+      "path": "search/search",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+
+    }]
+  }],
 
   "globalStyle": {
     "navigationBarTextStyle": "white",
