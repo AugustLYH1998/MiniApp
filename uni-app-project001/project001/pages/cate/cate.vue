@@ -1,5 +1,10 @@
 <template>
   <view>
+    <!-- 自定义组件 -->
+    <!-- <my-search :bgcolor="'#000000'" radius="0"></my-search> -->
+    <!-- 触发自定义事件 myclick -->
+    <my-search @myclick="gotoSearch"></my-search>
+
     <view class="scroll-view-contatiner">
       <!-- 左侧滑动区 -->
       <scroll-view scroll-y="true" :style="{height: wh + 'px'}" class="left-scroll">
@@ -16,12 +21,13 @@
         <view class="cate-level2" v-for="(item,index) in catLevel2" :key="index">
           <!-- 二级分类标题 -->
           <view class="cate-level2-title">
-            /{{item.cat_name}}/
+            -{{item.cat_name}}-
           </view>
 
           <!-- 三级分类 -->
           <view class="cat-level3-list">
-            <view class="cat-level3-list-item" v-for="(item3,index3) in item.children" :key="index3" @click="gotoGoodslist(item3)">
+            <view class="cat-level3-list-item" v-for="(item3,index3) in item.children" :key="index3"
+              @click="gotoGoodslist(item3)">
               <image :src="item3.cat_icon" mode="widthFix"></image>
               <text>{{item3.cat_name}}</text>
             </view>
@@ -53,7 +59,7 @@
     onLoad() {
       const sysInfo = uni.getSystemInfoSync();
       // console.log(sysInfo);
-      this.wh = sysInfo.windowHeight;
+      this.wh = sysInfo.windowHeight - 50;
       this.getCateList();
     },
     methods: {
@@ -76,11 +82,18 @@
         this.catLevel2 = this.cateList[index].children;
         this.scrollTop = this.scrollTop === 0 ? 1 : 0;
       },
-      
+
       // 跳转到商品列表页面
-      gotoGoodslist(item3){
+      gotoGoodslist(item3) {
         uni.navigateTo({
-          url:'/subpkg/goods_list/goods_list?cid='+ item3.cat_id
+          url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+        })
+      },
+
+      gotoSearch() {
+        // console.log('ok');
+        uni.navigateTo({
+          url: "/subpkg/search/search"
         })
       }
 

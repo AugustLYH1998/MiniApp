@@ -1,6 +1,10 @@
 <template>
-
   <view>
+    <!-- 搜索组件 -->
+    <view class="search-box">
+      <my-search @myclick="gotoSearch"></my-search>
+    </view>
+
     <!-- 轮播图区域 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
       <swiper-item v-for="(item,index) in swiperList" :key="index">
@@ -16,7 +20,7 @@
         <image :src="i.image_src"></image>
       </view>
     </view>
-    
+
     <!-- 楼层 -->
     <view class="floor-list">
       <view class="floor-item" v-for="(i,index) in floorList" :key="i">
@@ -102,6 +106,12 @@
         })
         this.floorList = res.message;
         uni.$showMsg('楼层数据获取成功', 3000);
+      },
+      // 访问搜索页
+      gotoSearch() {
+        uni.navigateTo({
+          url: "/subpkg/search/search"
+        })
       }
     }
   }
@@ -148,5 +158,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .search-box {
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 </style>
