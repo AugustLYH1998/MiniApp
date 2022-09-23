@@ -3,7 +3,7 @@
     <view class="goods_list">
       <!-- 商品每一项 -->
       <view v-for="(item,index) in goodsList" :key="index" @click="gotoDeatil(item)">
-        <my-goods :item="item"></my-goods>
+        <my-goods :item="item" ></my-goods>
       </view>
     </view>
 
